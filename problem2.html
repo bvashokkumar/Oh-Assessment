@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+
+    <button id="btn-0">Button 1</button>
+    <button id="btn-1">Button 2</button>
+    <button id="btn-2">Button 3</button>
+    <script type="text/javascript">
+        const prizes = ['A Unicorn!', 'A Hug!', 'Fresh Laundry!'];
+        //var has global scope by the time for loop finishes execution the value of
+        //btnNum is 3, prizes[3] will be undefined, let should be used which has block level scope
+        for (let btnNum = 0; btnNum < prizes.length; btnNum++) {
+            // For each of our buttons, when the user clicks it...
+            document.getElementById(`btn-${btnNum}`).onclick = () => {
+                // Tell her what she's won!
+                alert(prizes[btnNum]);
+            };
+        }
+    </script>
+
+</body>
+
+</html>
